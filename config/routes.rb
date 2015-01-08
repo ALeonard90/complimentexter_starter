@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-   resources :notifications, only: [:new, :create]
+   resources :notifications
    root 'notifications#new'
 end

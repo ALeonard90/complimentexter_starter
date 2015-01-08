@@ -3,7 +3,7 @@ require 'twilio-ruby'
 class Notification
   attr_accessor :to_number
 
-  def initialize(options={})
+   def initialize(options={})
     self.to_number = options[:to_number]
     account_sid = ENV["twilio_sid"]
     auth_token =  ENV["twilio_token"]
@@ -14,7 +14,7 @@ class Notification
     new_text = @client.messages.create(
       from: '+12405284954',
       to: '+17034054053',
-      body: random_compliment
+      body: random_compliment,
       )
   end
 
